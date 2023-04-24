@@ -12,8 +12,11 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+        $notes = Task::where('user_id', Auth::user()->id)->latest('updated_at')->get();
+        return view('tasks.index')->with('tasks', $tasks);
     }
+
+
 
     /**
      * Show the form for creating a new resource.
