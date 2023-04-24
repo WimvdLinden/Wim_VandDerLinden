@@ -21,8 +21,9 @@
                     </span>
                 </div>
             @endforeach
-
+            {{ $tasks->links() }}
         </div>
+
     </div>
 </x-app-layout>
 <x-app-layout>
@@ -48,7 +49,10 @@
                     </span>
                 </div>
             @endforeach
-
+            {{ $tasks->links() }}
         </div>
+
+
+    </div>
     </div>
 </x-app-layout>

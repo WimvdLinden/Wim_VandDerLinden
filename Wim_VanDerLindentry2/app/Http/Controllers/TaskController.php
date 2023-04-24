@@ -12,11 +12,11 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = Task::where('user_id', Auth::user()->id)->latest('updated_at')->get();
+        $tasks = Task::where('user_id', Auth::user()->id)->latest('updated_at')->get()->paginate(5)  ;
         return view('tasks.index')->with('tasks', $tasks);
     }
 
-
+    
 
     /**
      * Show the form for creating a new resource.
