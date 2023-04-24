@@ -16,14 +16,14 @@ class TaskController extends Controller
         return view('tasks.index')->with('tasks', $tasks);
     }
 
-    
+
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
+        return view('tasks.create');
     }
 
     /**
